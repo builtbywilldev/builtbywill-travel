@@ -1,0 +1,15 @@
+# builtbywill-travel — TODO
+🕒  Progress: 5:15:45 / 5:36:57 (20 minutes in)
+
+✅ Finish setting up route config with `route()` helper  
+✅ Resolve Vite plugin compatibility with React Router  
+⬜ Finalize all base routes  
+⬜ Verify Syncfusion integration  
+⬜ Push commit after routing compiles cleanly
+
+🚀 Goal for Tomorrow:
+• Grind through remaining clone structure  
+• Build out layout + page routing  
+• Push stable checkpoint after at least 1 view renders with real UI
+
+📍Reminder: This is the Travel Dashboard clone from JavaScript Mastery Pro
