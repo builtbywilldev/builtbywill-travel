@@ -2,13 +2,21 @@ import { Link, NavLink } from "react-router"
 import { sidebarItems } from "~/constants"
 import { cn } from "~/lib/utils"
 
-const NavItems = () => {
+const NavItems = ({ handleClick }: { handleClick?: () => void}) => {
+    const user = {
+        name: 'Violet',
+        email: 'violet@brown.com',
+        imageUrl: '/images/david.webp',
+
+    }
+
+
     return (
         <section className="nav-items">
             <Link to='/' className='link-logo'>
                 <img src="/icons/logo.svg" alt="logo" 
                 className="size-[30px]"/>
-                    <h1>Tourvisto</h1>
+                    <h1>Haven Travel</h1>
             </Link>
 
             <div className="container">
@@ -18,7 +26,7 @@ const NavItems = () => {
                             {({ isActive }: {isActive: boolean}) => (
                                 <div className={cn('group nav-item', {
                                     'bg-primary-100 !text-white': isActive
-                                })}>
+                                })} onClick={handleClick}>
                                     <img
                                     src={icon}
                                     alt=""
@@ -31,6 +39,18 @@ const NavItems = () => {
                         </NavLink>
                     ))}
                 </nav>
+                <footer className="nav-footer">
+                    <img src={user?.imageUrl || '/images/david.webp'} alt="" />
+                    <article>
+                        <h2>{user?.name}</h2>
+                        <p>{user?.email}</p>
+                    </article>
+                    <button onClick={() =>{
+                        console.log('logout')
+                    }} className="cursor-pointer">
+                        <img src="/icons/logout.svg" alt="" className="size-6"/>
+                    </button>
+                </footer>
             </div>
         </section>
     )
