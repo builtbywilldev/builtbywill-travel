@@ -1,0 +1,14 @@
+[33m26ade52[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m - OAuth login fully functional using Appwrite sessions - Manual routing guard logic in place for admin dashboard - Temporarily commented out some routing logic to move forward - Cleanup & optimization of role-based redirects planneddashboard i need to refine.  Not sure that this has been taught the most efficient way
+[33md2e2d04[m stuck trying to log user data in appwrite loggin off for the night.
+[33m0e5ab2a[m added in some auth! Time to make it look good!
+[33mb1f9810[m adding the updated todos
+[33m84c9dad[m added in my has, a proper license and updated my todos!
+[33m42ad074[m first full night working on this project already making very solid progress.  Checkout the images to seee the progress! 𖽏
+[33m746fb35[m adding screenshots!
+[33m7d09b76[m The Dashboard is coming along!
+[33mf9855b2[m Mobilt Nav done!
+[33ma6c0807[m 🔥 Fixed double label bug (image path + alt fallback)
+[33m73884a3[m I am loving this new react routing! So much easier!
+[33m13ea57d[m initial structure and route config for travel dashboard
+[33m1cddf05[m initialized travel dashboard with routes + Tailwind setup
+[33me443863[m Initial commit from create-react-router
