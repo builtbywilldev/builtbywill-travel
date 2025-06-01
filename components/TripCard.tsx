@@ -1,5 +1,4 @@
-import { index } from '@react-router/dev/routes'
-import { Link, useLocation, } from 'react-router'
+import { Link, useLocation } from 'react-router-dom';
 import {ChipDirective, ChipListComponent, ChipsDirective} from "@syncfusion/ej2-react-buttons";
 import { cn, getFirstWord } from '~/lib/utils';
 
