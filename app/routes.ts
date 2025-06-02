@@ -9,6 +9,7 @@ export default [
     route('trips', 'routes/admin/trips.tsx'),
     route('trips/create', 'routes/admin/Create-trip.tsx'),
     route('trips/:id', 'routes/admin/trip-details.tsx'),
+    route('/', 'routes/admin/home.tsx'),
 
     ])
 
