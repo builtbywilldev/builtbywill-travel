@@ -1,46 +1,95 @@
 import { useLocation } from "react-router-dom";
 import { TripCard } from "components";
 
-
 const TripDetails = () => {
-  const { state: trip } = useLocation();
+  const { state } = useLocation();
 
-  if (!trip) return <p className="p-6 text-red-500">❌ Trip not found</p>;
+  const popularTrips = [
+    {
+      id: "trip-001",
+      name: "Tropical Rewind",
+      imageUrls: ["/images/sample1.jpg"],
+      itinerary: [
+        {
+          day: 1,
+          location: "Thailand",
+          activities: [
+            { time: "Morning", description: "Temple visit" },
+            { time: "Afternoon", description: "Market food crawl" },
+            { time: "Evening", description: "Beach walk" },
+          ],
+        },
+      ],
+      interests: "Adventure",
+      travelStyle: "Solo",
+      budget: "Moderate",
+      groupType: "Solo",
+      estimatedPrice: "$1,000",
+      country: "Thailand",
+      description: "A chill solo journey into the tropics of Thailand.",
+      bestTimeToVisit: ["Spring (Mar–May): Blossoms", "Summer: Fun + Sun"],
+      weatherInfo: ["28–35°C, tropical"],
+    },
+    {
+      id: "trip-002",
+      name: "Zen Break",
+      imageUrls: ["/images/sample3.jpg"],
+      itinerary: [
+        {
+          day: 1,
+          location: "Japan",
+          activities: [
+            { time: "Morning", description: "Visit Kyoto temples" },
+            { time: "Afternoon", description: "Sushi tasting" },
+            { time: "Evening", description: "Cherry blossom walk" },
+          ],
+        },
+      ],
+      interests: "Luxury",
+      travelStyle: "Couple",
+      budget: "Premium",
+      groupType: "Couple",
+      estimatedPrice: "$3,000",
+      country: "Japan",
+      description: "A romantic escape into Japanese calm.",
+      bestTimeToVisit: ["Spring (Mar–May): Sakura", "Fall: Scenic serenity"],
+      weatherInfo: ["Mild (15–25°C)"],
+    },
+    {
+      id: "trip-003",
+      name: "Alpine Quest",
+      imageUrls: ["/images/sample4.jpg"],
+      itinerary: [
+        {
+          day: 1,
+          location: "Switzerland",
+          activities: [
+            { time: "Morning", description: "Mountain hike" },
+            { time: "Afternoon", description: "Lakeside picnic" },
+            { time: "Evening", description: "Hot chocolate by fire" },
+          ],
+        },
+      ],
+      interests: "Nature",
+      travelStyle: "Friends",
+      budget: "Luxury",
+      groupType: "Friends",
+      estimatedPrice: "$2,400",
+      country: "Switzerland",
+      description: "An alpine escape through nature and friends.",
+      bestTimeToVisit: ["Winter: Snowboarding", "Spring: Waterfalls"],
+      weatherInfo: ["Cold, 0–10°C in winter"],
+    },
+  ];
+
+const tripId = location.pathname.split("/").pop();
+const trip = state || popularTrips.find((t) => t.id === tripId) || popularTrips[0];
 
   const visitTimeAndWeatherInfo = [
     { title: "Best Time to Visit", items: trip.bestTimeToVisit },
     { title: "Weather", items: trip.weatherInfo },
   ];
 
-  const popularTrips = [
-  {
-    id: "trip-001",
-    name: "Tropical Rewind",
-    imageUrls: ["/images/sample1.jpg"],
-    itinerary: [{ location: "Thailand" }],
-    interests: "Adventure",
-    travelStyle: "Solo",
-    estimatedPrice: "$1,000",
-  },
-  {
-    id: "trip-002",
-    name: "Zen Break",
-    imageUrls: ["/images/sample3.jpg"],
-    itinerary: [{ location: "Japan" }],
-    interests: "Luxury",
-    travelStyle: "Couple",
-    estimatedPrice: "$3,000",
-  },
-  {
-    id: "trip-003",
-    name: "Alpine Quest",
-    imageUrls: ["/images/sample4.jpg"],
-    itinerary: [{ location: "Switzerland" }],
-    interests: "Nature",
-    travelStyle: "Friends",
-    estimatedPrice: "$2,400",
-  },
-];
 
 
   return (

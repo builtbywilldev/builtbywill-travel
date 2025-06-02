@@ -152,7 +152,7 @@ export const dashboardStats = {
 };
 export const allTrips = [
   {
-    id: 1,
+    id: "trip-001",
     name: "Tropical Rewind",
     imageUrls: ["/images/sample1.jpg"],
     itinerary: [{ location: "Thailand" }],
@@ -161,7 +161,7 @@ export const allTrips = [
     estimatedPrice: "$1,000",
   },
   {
-    id: 2,
+    id: "trip-002",
     name: "French Reverie",
     imageUrls: ["/images/sample2.jpg"],
     itinerary: [{ location: "Paris" }],
@@ -170,7 +170,7 @@ export const allTrips = [
     estimatedPrice: "$2,000",
   },
   {
-    id: 3,
+    id: "trip-003",
     name: "Zen Break",
     imageUrls: ["/images/sample3.jpg"],
     itinerary: [{ location: "Japan" }],
@@ -179,7 +179,7 @@ export const allTrips = [
     estimatedPrice: "$3,000",
   },
   {
-    id: 4,
+    id: "trip-004",
     name: "Adventure in Westeros",
     imageUrls: ["/images/sample4.jpg"],
     itinerary: [{ location: "Croatia" }],
