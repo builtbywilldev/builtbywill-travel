@@ -23,9 +23,9 @@ export const links: Route.LinksFunction = () => [
   },
 ];
 
-import { registerLicense} from "@syncfusion/ej2-base"
+import { registerLicense } from "@syncfusion/ej2-base";
 
-registerLicense(import.meta.env.VITE_SYNCFUSION_LICENSE_KEY)
+registerLicense(import.meta.env.VITE_SYNCFUSION_LICENSE_KEY);
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -33,9 +33,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Silent Prototype AI Dashboard" />
+        <link rel="icon" type="image/svg+xml" href="/icons/logo.svg" />
+        <title>Haven Travel Dashboard</title>
         <Meta />
         <Links />
       </head>
+
       <body>
         {children}
         <ScrollRestoration />

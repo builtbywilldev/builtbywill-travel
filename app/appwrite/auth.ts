@@ -39,7 +39,11 @@ export const storeUserData = async () => {
       }
     );
 
-    if (!createdUser.$id) redirect("/sign-in");
+    if (!createdUser.$id) {
+      redirect("/sign-in");
+    } else {
+      window.location.href = "/dashboard"; // ✅ Force a redirect on success
+    }
   } catch (error) {
     console.error("Error storing user data:", error);
   }
@@ -65,7 +69,7 @@ export const loginWithGoogle = async () => {
   try {
     account.createOAuth2Session(
       OAuthProvider.Google,
-      `${window.location.origin}/`,
+      `${window.location.origin}/dashboard`,
       `${window.location.origin}/404`
     );
   } catch (error) {
